@@ -7,7 +7,8 @@ import "./styles.css";
 
 export const AuthorForm = ({
   id=null,
-  callback
+  callback,
+  onSuccess = () => {},
 }) => {
   const [author, setAuthor] = useState({});
   const [authors, setAuthors] = useState([]);
@@ -34,9 +35,10 @@ export const AuthorForm = ({
 
 
       if(id){
-        const response = await AuthorService.update(id,formData);
+        await AuthorService.update(id,formData);
       }else {
         const response = await AuthorService.create(formData);
+        onSuccess(response);
       }
 
 

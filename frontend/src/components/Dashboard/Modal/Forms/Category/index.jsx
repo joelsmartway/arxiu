@@ -8,7 +8,8 @@ import "./styles.css";
 
 export const CategoryForm = ({
   id=null,
-  callback
+  callback,
+  onSuccess = () => {},
 }) => {
   const [category, setCategory] = useState({});
   const [categories, setCategories] = useState([]);
@@ -28,9 +29,10 @@ export const CategoryForm = ({
       formData.append("name", name);
 
       if(id){
-        const response = await CategoryService.update(id,formData);
+        await CategoryService.update(id,formData);
       }else {
         const response = await CategoryService.create(formData);
+        onSuccess(response);
       }
 
 

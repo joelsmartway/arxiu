@@ -3,10 +3,11 @@ import { useSearchParams } from "react-router-dom";
 import "./styles.css";
 import { ModalFormFactory } from "./Forms";
 
-const Element  = ({ 
+const Element  = ({
   callback = () => {} ,
   entity,
-  id=null
+  id=null,
+  onSuccess = () => {},
 }) => {
   const Form = ModalFormFactory.createForm(entity);
   const [currentId, setCurrentId] = useState(id);
@@ -26,6 +27,7 @@ const Element  = ({
         <Form
           id={currentId}
           callback={close}
+          onSuccess={onSuccess}
         />
       </div>
     </div>

@@ -8,7 +8,8 @@ import "./styles.css";
 
 export const PostForm = ({
   id=null,
-  callback
+  callback,
+  onSuccess = () => {},
 }) => {
   const [post, setPost] = useState({});
   const [authors, setAuthors] = useState([]);
@@ -45,9 +46,10 @@ export const PostForm = ({
       newtImages.forEach(img => formData.append("newImages", img));
 
       if(id){
-        const response = await PostService.update(id,formData);
+        await PostService.update(id,formData);
       }else {
         const response = await PostService.create(formData);
+        onSuccess(response);
       }
 
 

@@ -55,6 +55,10 @@ const Element = () => {
     setDialog(true);
   };
 
+  const handleSuccess = (newPost) => {
+    setPosts((prev) => [newPost, ...prev]);
+  };
+
   const handleUpdate = (id) => {
     setDialog(true);
     setElementSelected(id);
@@ -135,6 +139,7 @@ const Element = () => {
           callback={setDialog}
           entity='post'
           id={elementSelected}
+          onSuccess={handleSuccess}
         />
       )}
     </div>

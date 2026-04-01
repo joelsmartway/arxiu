@@ -51,6 +51,10 @@ const Element = () => {
     setDialog(true);
   };
 
+  const handleSuccess = (newCategory) => {
+    setCategories((prev) => [newCategory, ...prev]);
+  };
+
   const handleUpdate = (id) => {
     setDialog(true);
     setElementSelected(id);
@@ -131,6 +135,7 @@ const Element = () => {
           callback={setDialog}
           entity='category'
           id={elementSelected}
+          onSuccess={handleSuccess}
         />
       )}
     </div>
