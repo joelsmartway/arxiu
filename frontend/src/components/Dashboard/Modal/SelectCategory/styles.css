@@ -1,0 +1,77 @@
+.multi-select {
+  position: relative;
+  width: 100%;
+}
+
+.multi-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.select-box {
+  min-height: 48px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  cursor: pointer;
+  background: white;
+}
+
+.placeholder {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.chip {
+  background: #e6f0ff;
+  color: #1a73e8;
+  padding: 4px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.remove-chip {
+  background: transparent;
+  border: none;
+  color: #1a73e8;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 180px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  z-index: 10;
+  margin-top: 4px;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.dropdown-item:hover {
+  background: #f2f2f2;
+}
+
+.dropdown-item.selected {
+  background: #e6f0ff;
+  font-weight: bold;
+}

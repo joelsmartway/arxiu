@@ -1,0 +1,24 @@
+.AuthorCard__container {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  width: fit-content;
+}
+
+.AuthorCard__container img {
+  border-radius: 50%;
+  max-width: 100px;
+}
+
+.AuthorCard__container .AuthorCard__container__name {
+  font-weight: 700;
+}
+
+.AuthorCard__container .AuthorCard__container__description {
+  line-height: 0.8;
+}
+@media (max-width: 768px) {
+  .AuthorCard__container img {
+    max-width: 20%;
+  }
+}

@@ -1,0 +1,33 @@
+.rainbow-background {
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #ff9900,
+    #ffff00,
+    #33cc33,
+    #3399ff,
+    #9900cc,
+    #ff3399,
+    #ff0000
+  );
+  background-size: 1000% 1000%;
+  animation: rainbow 10s linear infinite;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+svg {
+  opacity: 0.6;
+  z-index: 1;
+}

@@ -1,0 +1,99 @@
+.Page__grid {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr 0.40fr;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.Page__content{
+  display: flex;
+  flex-direction:column;
+  gap: 2em;
+  white-space: pre-wrap;
+}
+.Page__content__title{
+  font-size: 2em;
+  font-weight: 600;
+}
+.Page__content__text{
+  font-size: 20px;
+}
+.Page__content__author{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.Page__images{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+.Page__images img {
+  max-width: 80%;
+}
+
+@media (max-width: 768px) {
+  .Layout {
+    margin-top: 0;
+  }
+ .Page__grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "images"
+      "content";
+  }
+
+  .Page__grid > :first-child {
+    display: none;
+  }
+
+  .Page__content {
+    display: grid;
+    margin: 0 1.5em;
+    grid-template-areas:
+      "title"
+      "author"
+      "text";
+    grid-area: content;
+  }
+  
+
+  .Page__images {
+    grid-area: images;
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    align-items: start; 
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .Page__images::-webkit-scrollbar {
+    display: none;
+  }
+  .Page__images img {
+    display: block;            
+    flex: 0 0 100%;           
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    scroll-snap-align: start;
+  }
+
+  .Page__content__title {
+    grid-area: title;
+  }
+
+  .Page__content__author {
+    grid-area: author;
+    flex-direction: row;
+  }
+
+  .Page__content__text {
+    grid-area: text;
+  }
+}
+

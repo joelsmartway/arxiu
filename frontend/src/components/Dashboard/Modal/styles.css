@@ -1,0 +1,44 @@
+.Modal__container {
+  position: fixed;          /* full-screen modal */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.Modal__content {
+  position: relative;        /* so the close button stays inside */
+  background-color: white;
+  padding: 3rem 2rem 2rem 2rem;
+  border-radius: 12px;
+  min-width: 320px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* close button positioned inside the top-right corner */
+.Modal__closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: #eee;
+  border-radius:8px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Modal__closeBtn:hover {
+  background: #ccc;
+}

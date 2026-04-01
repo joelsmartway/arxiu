@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.OCard__card {
+  padding: 1rem;
+  width: 100%;
+  border-bottom: 1px dotted #F5F5DC;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.OCard__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.OCard__number {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  color: #F5F5DC;
+  font-family: monospace;
+  font-size: 0.875rem;
+  background-color: transparent;
+  transition: background 0.2s;
+}
+
+.OCard__title {
+  color: #F5F5DC;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0.25rem;
+  background-color: transparent;
+  transition: background 0.2s;
+}
+
+.OCard__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.OCard__date {
+  font-size: 0.875rem;
+  color: #F5F5DC;
+  font-family: monospace;
+  background-color: transparent;
+  transition: background 0.2s;
+}
+
+.OCard__open {
+  background: #F5F5DC;
+  color: black;
+  font-family: monospace;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+/* Hover Styles */
+.OCard__card.hovered .OCard__title {
+  background-color: #F5F5DC;
+  color: black;
+}
+
+.OCard__card.hovered .OCard__number,
+.OCard__card.hovered .OCard__date {
+  background-color: #F5F5DC;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .OCard__number {
+    left: auto;        
+    top: auto;         
+    right: 0;
+    bottom: 0.25rem;
+  }
+  .OCard__header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+}

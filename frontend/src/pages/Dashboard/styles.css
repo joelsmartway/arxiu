@@ -1,0 +1,44 @@
+.Dashboard__container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr; 
+  gap: 16px 24px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: black;
+}
+
+.Dashboard__entities {
+  background-color: #A3A3A3;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+.Dashboard__entities__element {
+  background-color: white;
+  color: black;
+  text-transform:uppercase;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  min-width: 80%;
+  font-weight: 700;
+
+  transition: 
+  background-color 0.2s ease,
+  transform 0.2s ease,
+  box-shadow 0.2s ease;
+}
+
+.Dashboard__entities__element:hover {
+  background-color: #f0f0f0; /* slightly darker */
+  transform: scale(1.03);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.Dashboard__content {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}

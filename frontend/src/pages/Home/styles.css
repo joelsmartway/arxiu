@@ -1,0 +1,13 @@
+.Home__layout {
+  display: grid;
+  grid-template-columns: 0.15fr 1fr; 
+  gap: 16px 24px;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .Home__layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
