@@ -13,6 +13,8 @@ frontend/dist/
 # API uploads
 api/uploads/
 
+./claude
+
 # Logs
 *.log
 
